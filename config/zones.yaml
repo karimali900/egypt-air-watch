@@ -1,0 +1,24 @@
+# Egypt air-watch: bounding box, airports, alert rules.
+bbox: [22.5, 22.0, 36.5, 33.0]   # lon_min, lat_min, lon_max, lat_max (Egypt + neighbours)
+
+airports:
+  - {code: CAI, name: "Cairo Intl", lon: 31.41, lat: 30.12}
+  - {code: HRG, name: "Hurghada", lon: 33.80, lat: 27.18}
+  - {code: SSH, name: "Sharm El Sheikh", lon: 34.39, lat: 27.98}
+  - {code: LXR, name: "Luxor", lon: 32.71, lat: 25.67}
+  - {code: ASW, name: "Aswan", lon: 32.82, lat: 23.97}
+  - {code: ABS, name: "Abu Simbel", lon: 31.62, lat: 22.38}
+  - {code: ATZ, name: "Asyut", lon: 31.19, lat: 27.18}
+
+alerts:
+  emergency_squawks: ["7500", "7600", "7700"]
+  low_altitude_m: 3000.0
+  airport_radius_km: 25.0
+  new_entrant: true
+
+poll_seconds: 300
+db: data/tracks.db
+# Free OpenSky account (4000 req/day, allows ~30 s polling):
+#   export OPENSKY_USER=... OPENSKY_PASS=...
+# Register at https://opensky-network.org (My OpenSky -> register, then it
+# takes ~1 day for the new account to get API credit).

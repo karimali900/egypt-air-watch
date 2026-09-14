@@ -1,0 +1,10 @@
+# OAuth/API secrets — every user creates their own free OpenSky client
+.env
+# Live/regenerable data
+data/tracks.db
+data/snapshot_*.csv
+data/alerts.csv
+data/track_*.csv
+data/track_*.kml
+data/feed_status.json
+__pycache__/
